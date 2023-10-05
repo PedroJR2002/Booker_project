@@ -318,10 +318,11 @@
 							"});",
 							"",
 							"",
-							"pm.test(\"Check if token is a numeric string\", function() {",
+							"pm.test(\"Check if token is an alphanumeric string\", function() {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.token).to.match(/^\\d+$/);",
+							"    pm.expect(jsonData.token).to.match(/^[a-zA-Z0-9]+$/);",
 							"});",
+							"",
 							""
 						],
 						"type": "text/javascript"
