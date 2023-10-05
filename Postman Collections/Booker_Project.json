@@ -302,6 +302,21 @@
 		},
 		{
 			"name": "Create Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6704582a-31d2-4d99-86dc-ee6f156500d1",
+						"exec": [
+							"pm.test(\"Status is set to 200\", function (){",
+							"    pm.expect(pm.response.code).to.eql(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "e2048f00-dcbc-47e4-8dfe-9860b1b8941e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
