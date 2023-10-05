@@ -351,6 +351,33 @@
 		},
 		{
 			"name": "Get Booking Ids",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f57378e2-0fc2-4983-be14-eb75d2205d44",
+						"exec": [
+							"pm.test(\"Status is set to 200\", function (){",
+							"    pm.expect(pm.response.code).to.eql(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Check if booking id is there\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.bookingid).to.be.ok;",
+							"});",
+							"",
+							"/*pm.test(\"Check if booking id is there\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.bookingid).to.be.ok;",
+							"/*}); ",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "df550841-8a3b-4393-8f87-ad53dfc0b1a2",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
