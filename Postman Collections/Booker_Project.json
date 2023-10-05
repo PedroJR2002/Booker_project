@@ -364,14 +364,10 @@
 							"",
 							"pm.test(\"Check if booking id is there\", function() {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.bookingid).to.be.ok;",
+							"    jsonData.forEach(item => {",
+							"        pm.expect(item.bookingid).to.be.a('number');",
+							"    });",
 							"});",
-							"",
-							"/*pm.test(\"Check if booking id is there\", function() {",
-							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.bookingid).to.be.ok;",
-							"/*}); ",
-							"",
 							""
 						],
 						"type": "text/javascript"
