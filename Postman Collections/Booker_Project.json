@@ -101,7 +101,7 @@
 							"// Test to check if first name is updated to Test",
 							"pm.test(\"First name is updated to Test\", function() {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.firstname).to.eql(\"Test\");",
+							"    pm.expect(jsonData.firstname).to.eql(\"{{NameOfPerson}}\");",
 							"});",
 							"",
 							"// Test to check if last name is Brown",
